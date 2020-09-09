@@ -23,6 +23,10 @@ Here is the list of my skills:
 In the future, I plan to expand this list by learning new programming languages.
 
 To apply my knowledge in practice, I'm solving tasks on the <a href="https://www.codewars.com/"> Codewars</a> website and here is my result:
+<details>
+<summary> My result on codeWars: </summary>
+<summary> <img src="https://www.codewars.com/users/ForeverStudent/badges/large"> </summary>
+</details>
 I am also working on a collectible card game.
 
 ### Education
