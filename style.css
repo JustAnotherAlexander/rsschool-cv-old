@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.Title {
+
+}
+
+.foto {
+   
+    width:100px;
+    height: auto;
+}
+
+.About_me_section {
+    
+}
