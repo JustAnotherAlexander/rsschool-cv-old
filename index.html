@@ -9,198 +9,7 @@
     <title>Junior Developer Resume</title>
 </head>
 <body>
-
-  <!--
-<div class="main">
-<article class="Title">
- <div class="Title_text">Junior Developer Resume</div>
-</article>
-<h3>About Me</h3>
-<article>
-<img class="foto" src="assets/My_foto.jpg" alt="My_foto">
-</article>
-My name is <strong>Aliaksandr Matveyankou</strong>.
-</section>
-<section class="My_interests_section">
-<h3>My interests</h3>
-<article>
-I enjoy studying computer technology and programming. I spend all my free time learning new techniques and nuances 
-of programming in Javascript.
-Since I love programming and technology, I decided that turning my hobby into a job is not a bad idea. This will allow 
-me to apply the knowledge gained in real projects, as well as constant practice will help improve my programming skills.
-</article>
-</section>
-<section class="My_skills_section">
-<h2>My skills:</h2>
-<h3>Here is the list of my skills:</h3>
-<ul>
-<li>JavaScript;</li>
-<li>CSS;</li>
-<li>Java;</li>
-<li>HTML;</li>
-<li>GIT;</li>
-<li>React</li>
-</ul>
-
-In the future, I plan to expand this list by learning new programming languages.
-
-To apply my knowledge in practice, I'm solving tasks on the <a href="https://www.codewars.com/"> Codewars</a> website and here is my result:
-<details>
-<summary> My result on codeWars: </summary>
-<summary> <img src="https://www.codewars.com/users/ForeverStudent/badges/large"> </summary>
-</details>
-I am also working on a collectible card game.
-</section>
-<section class="Education_section">
-<h2>Education</h2>
-
-I graduated from the “Gomel Technical University named after Pavel Osipovich Sukhoi” with a degree in Hydraulics.
-There I graduated from the magistracy and now i'm studing in graduate school.
-</section>
-<section class="English_language_section">
-<h2>English Language</h2>
-
-I only studied English while studying at school and university. At the moment I periodically 
-read English literature and watch films in English.
-</section>
-<section class="Code_Example">
-<h2>Code example</h2>
-
-As an example, here is a small piece of code for of js function that validates the solution of Sudoku:
-
-<details> 
-<summary> here is the code of sudoku solution validator function: </summary>
-  <pre>
-    <code>
-function validSolution(board){
-var candidatesOfCell=[];
-var rowIncludes = false;
-var columnIncludes = false;
-var squareIncludes = false;
-var result =true;
- for (let row=0; row<board.length; row++) {
-   for (let column=0; column<board.length; column++) {
-        if (board[row][column]!=0) {
-          for (let columnCounter=0; columnCounter<board.length; columnCounter++) {
-            if (board[row][columnCounter]==board[row][column] && columnCounter!=column) {
-             rowIncludes = true;
-             }
-          }
-          for (let rowCounter=0; rowCounter<board.length; rowCounter++) {
-            if (board[rowCounter][column]==board[row][column] && rowCounter!=row) {
-              columnIncludes=true;
-            }
-          } 
-          if (row<3) {
-            for (let rowCounter2=0;rowCounter2<3;rowCounter2++) {
-              if (column<3) {
-                for (let columnCounter2=0; columnCounter2<3; columnCounter2++) {
-                  if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-                    squareIncludes = true;
-                  }
-                }
-              }
-              if (column>=3&&column<6) {
-                for (let columnCounter2=3; columnCounter2<6; columnCounter2++) {
-                  if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-                    squareIncludes = true;
-                  }
-                }
-              }
-              if (column>=6) {
-                for (let columnCounter2=6; columnCounter2<9; columnCounter2++) {
-                  if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-                    squareIncludes = true;
-                  }
-                }
-              }
-            }
-          }
-          if (row>=3&&row<6) {
-            for (let rowCounter2=3;rowCounter2<6;rowCounter2++) {
-              if (column<3) {
-                for (let columnCounter2=0; columnCounter2<3; columnCounter2++) {
-                  if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-                    squareIncludes = true;
-                  }
-                }
-              }
-          if (column>=3&&column<6) {
-           for (let columnCounter2=3; columnCounter2<6; columnCounter2++) {
-            if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-              squareIncludes = true;
-            }
-          }
-        }
-       if (column>=6) {
-        for (let columnCounter2=6; columnCounter2<9; columnCounter2++) {
-          if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-            squareIncludes = true;
-          }
-        }
-      }
-    }
-  }
-          if (row>=6) {
-    for (let rowCounter2=6;rowCounter2<9;rowCounter2++) {
-      if (column<3) {
-        for (let columnCounter2=0; columnCounter2<3; columnCounter2++) {
-          if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-            squareIncludes = true;
-          }
-        }
-      }
-      if (column>=3&&column<6) {
-        for (let columnCounter2=3; columnCounter2<6; columnCounter2++) {
-          if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-            squareIncludes = true;
-          }
-        }
-      }
-      if (column>=6) {
-        for (let columnCounter2=6; columnCounter2<9; columnCounter2++) {
-          if (board[rowCounter2][columnCounter2] == board[row][column] && (rowCounter2!=row && columnCounter2!=column)) {
-            squareIncludes = true;
-          }
-        }
-      }
-              }
-            }
-          if (rowIncludes!=false || columnIncludes!=false || squareIncludes!=false) {
-              result = false;
-            }
-            }   
-            rowIncludes = false;
-            columnIncludes = false;
-            squareIncludes = false;
-        }
-      }
-    if (board[0][0]==0) {
-        let InRow=false;
-        let InColumn=false;
-          for (let columnCounter=0; columnCounter<board.length; columnCounter++) {
-            if (board[0][columnCounter]==board[0][0] && columnCounter!=0) {
-             InRow = true;
-             }
-          }
-          for (let rowCounter=0; rowCounter<board.length; rowCounter++) {
-            if (board[rowCounter][0]==board[0][0] && rowCounter!=0) {
-              InColumn=true;
-            }
-          }
-          if (InRow!=false && InColumn!=false) {
-        result = false;
-    }
-    }
-      return result;
-}
-    </code>
-  </pre>
-</details>
-</section>
-</div>
--->
-
+  
 <section class="Title">
   <article class="Title_text">
     Junior Developer Resume
@@ -224,6 +33,7 @@ of programming in Javascript.
       <div class="info_item"><strong>Age: </strong> 25 Years</div>
       <div class="info_item"><strong>Email: </strong> <a href="mailto:aleksandreliuz@gmail.com"> aleksandreliuz@gmail.com</a></div>
       <div class="info_item"><strong>GitHub: </strong><a href="https://github.com/JustAnotherAlexander">JustAnotherAlexander</a></div>
+      <div class="info_item"><strong>Codewars: </strong><img src="https://www.codewars.com/users/ForeverStudent/badges/small"></div>
       <div class="info_item_bottom"><strong>Adress: </strong> <a href="https://www.google.com/maps/place/%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F+%D1%83%D0%BB.+2,+%D0%93%D0%BE%D0%BC%D0%B5%D0%BB%D1%8C/@52.4126714,30.9413601,17z/data=!3m1!4b1!4m5!3m4!1s0x46d469e74d41ad71:0xa5dbfa9d1e12e39b!8m2!3d52.4126681!4d30.9435488"> Belarus, Gomel, Sosnovaya street, 2</a></div>
     </div>
   </div>
@@ -300,14 +110,6 @@ of programming in Javascript.
   <div class="section_title">My Skills</div>
   <div class="skills_table">
 
-<!--
-<li>JavaScript;</li>
-<li>CSS;</li>
-<li>Java;</li>
-<li>HTML;</li>
-<li>GIT;</li>
-<li>React</li>
--->
     <div class="skill">
       <div class="skill_text">
         JavaScript
@@ -391,7 +193,6 @@ of programming in Javascript.
         25%
       </div>
     </div>
-
   </div>
 </section>
 
